@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background-color: #1a1a1aeb;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+header img {
+  height: 10vh;
+  margin-right: 20px;
+
+  /* background-color: rgb(82, 72, 72); */
+}
+header h2 {
+  color: white;
+  text-align: center;
+}
+.content {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: right;
+  transition: 0.7s;
+}
+main img {
+  margin: 0px 20px;
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: auto;
+}
+main p {
+  margin: 10px 20px;
+  text-align: justify;
+}
+.show-btn,
+.hide-btn {
+  position: fixed;
+  font-size: 5vh;
+  top: 15px;
+  left: 20px;
+  color: white;
+  transition: 0.5s;
+}
+.hide-btn {
+  opacity: 0;
+}
+#chk {
+  visibility: hidden;
+  position: absolute;
+  z-index: -100;
+}
+.side-bar {
+  position: fixed;
+  top: 0;
+  width: 20%;
+  /* text-align: center; */
+  left: -100%;
+  /* left: 0; */
+  height: 100vh;
+  margin-top: 10vh;
+  background-color: #413e3e;
+  transition: 0.7s;
+}
+aside ul li {
+  /* display: block; */
+  /* margin: 10px; */
+
+  list-style: none;
+  border-bottom: 1px solid grey;
+}
+aside ul li a {
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+aside ul li a:hover {
+  color: black;
+  background-color: grey;
+}
+aside ul i {
+  margin-right: 10px;
+}
+#chk:checked ~ .side-bar {
+  left: 0px;
+}
+#chk:checked ~ .show-btn {
+  opacity: 0;
+}
+#chk:checked ~ .hide-btn {
+  opacity: 1;
+}
+#chk:checked ~ .content {
+  width: 80%;
+}
+.connect {
+  margin-top: 150px;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+.connect a {
+  color: white;
+  font-size: 30px;
+}
+@media (max-width: 500px) {
+  header h2 {
+    display: none;
+  }
+  .side-bar {
+    width: 100%;
+  }
+}
